@@ -22,6 +22,8 @@ def binary_wrapper(sorted, n, target):
     return binary_recursive(sorted, target, start, end)
 
 def binary_recursive(sorted, target, start, end):
+    if start > end:
+        return -1 #not found
     mid = (start + end) // 2
     if sorted[mid] == target:
         return mid
@@ -31,7 +33,7 @@ def binary_recursive(sorted, target, start, end):
     if sorted[mid] > target:
         return binary_recursive(sorted, target, start, mid-1)
         #throws out the right recurses to the left
-    return -1
+  
 
 def main():
     array = [8,9,10,11,12]
