@@ -27,5 +27,6 @@ def partition(array, start, end):
 
     #now the pivot_val is in the correct sorted spot
     return pivot_spot #need it's location to split on
+    
 
 
