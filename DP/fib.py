@@ -19,7 +19,7 @@ def fib_memo(n, array):
 
 def main():
     n = int(input())
-    array = [-1] * (n+1) #generate soluton array
+    array = [-1] * (n+1) #generate solution array
     #populate known base case solution values
     array[0] = 0
     array[1] = 1
