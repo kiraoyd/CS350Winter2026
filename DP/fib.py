@@ -17,6 +17,15 @@ def fib_memo(n, array):
     array[n] = ans #add my answer to array
     return ans #give my answer to my parent
 
+def fib_tab(n, table):
+    index = 2
+    while index <= n:
+        table[index] = table[index -1] + table[index - 2]
+        index += 1
+    print(table) #should be full of answers
+
+    return table[n]
+
 def main():
     n = int(input())
     array = [-1] * (n+1) #generate solution array
@@ -24,7 +33,8 @@ def main():
     array[0] = 0
     array[1] = 1
     
-    ans = fib_memo(n, array)
+    #ans = fib_memo(n, array)
+    ans = fib_tab(n, array)
     print(f"The {n} fibonacci number is: {ans}")
 
 main()
